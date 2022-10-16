@@ -1,0 +1,195 @@
+@import "../base/variables";
+
+.quote {
+  .page_header {
+    text-align: center;
+    h2 {
+      font-size: $xxl;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .card_wrapper {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .service_card {
+    border-radius: 20px;
+    max-width: 920px;
+    text-align: center;
+    flex: 3;
+    padding: 4rem 2rem;
+    margin: 3rem auto;
+    padding-top: 3rem;
+    background-color: #fff;
+    border: 1px solid #aaa;
+
+    .top_panel {
+      text-align: center;
+      margin-bottom: 2rem;
+
+      span {
+        padding: 0.5rem 0;
+        display: inline-block;
+      }
+    }
+
+    .bottom_panel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      padding-top: 4rem;
+      justify-content: center;
+
+      .next_btn {
+        padding: 1.25rem 1.5rem;
+        font-size: $md;
+        display: flex;
+        cursor: pointer;
+        border-radius: 8px;
+        border: none;
+        background-color: $primary;
+        color: $background;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .prev_btn {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        cursor: pointer;
+        font-size: 1em;
+        border: none;
+        background-color: transparent;
+      }
+    }
+
+    .progress_bar {
+      position: relative;
+      height: 5px;
+      border-radius: 50px;
+      overflow: hidden;
+      background-color: rgba(0, 0, 0, 0.2);
+      max-width: 180px;
+      margin-left: auto;
+      margin-right: auto;
+
+      .progress {
+        background-color: rgba(0, 0, 0, 0.9);
+        height: 5px;
+        border-radius: 50px;
+      }
+    }
+
+    .question {
+      font-size: $lg;
+      margin-bottom: 4rem;
+    }
+
+    .card_container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+
+      .card {
+        cursor: pointer;
+        border: 1px solid #aaa;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 2rem;
+        min-height: 160px;
+        border-radius: 20px;
+        position: relative;
+        background-color: #fff;
+
+        &::before {
+          position: absolute;
+          content: "";
+          height: 100%;
+          width: 100%;
+          border-radius: 20px;
+          border: 1px solid #202020;
+          left: 50%;
+          top: 50%;
+          transition: ease-in-out 0.5s;
+          transform: translateX(-50%) translateY(-50%);
+        }
+
+        &:hover::before {
+          height: 120%;
+          border-radius: 25px;
+          width: 115%;
+        }
+      }
+
+      .card_icon {
+        font-size: 60px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  .bill {
+    flex: 1;
+    border-radius: 20px;
+    max-width: 920px;
+    margin: 3rem auto;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    height: max-content;
+
+    .bill_header {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #aaa;
+
+      .left,
+      .right {
+        padding: 0.5rem 1.5rem;
+        font-size: $md;
+      }
+
+      .left {
+        flex: 2;
+      }
+
+      .right {
+        flex: 1;
+        border-left: 1px solid #aaa;
+      }
+    }
+
+    .bill_footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+      margin-top: 2rem;
+      border-top: 1px solid #aaa;
+
+      span {
+        font-size: $md;
+
+        &.bold {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

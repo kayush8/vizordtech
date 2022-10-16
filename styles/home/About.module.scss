@@ -1,0 +1,52 @@
+@import "../base/variables";
+
+.about {
+  margin-bottom: 20rem;
+  padding: 0 1.5rem;
+  .wrapper {
+    max-width: 1120px;
+    margin-left: auto;
+  }
+
+  .container {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h2 {
+    font-size: 3.75em;
+    padding-right: 7vw;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 4rem;
+  }
+
+  @media (max-width: 992px) {
+    h2 {
+      font-size: 2.5em;
+    }
+  }
+
+  @media (max-width: 686px) {
+    h2 {
+      font-size: 2em;
+    }
+  }
+
+  .para_wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 3vw;
+    max-width: 750px;
+    margin-bottom: 4rem;
+
+    p {
+      flex: 1;
+    }
+
+    @media (max-width: 686px) {
+      flex-direction: column;
+    }
+  }
+}

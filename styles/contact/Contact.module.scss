@@ -1,0 +1,137 @@
+@import "../base/variables";
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  position: relative;
+
+  .contact_details {
+    flex: 1;
+    background-color: #111216;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    .circles {
+      position: absolute;
+      height: 50vh;
+      flex: 1;
+      width: 50vh;
+      top: 50%;
+      transform: translateY(-30%);
+      border-radius: 50%;
+      border: 1px dashed rgba(255, 255, 255, 0.4);
+
+      &::before,
+      &::after {
+        display: flex;
+        content: "";
+        height: 50vh;
+        transform: translateX(-80%);
+        width: 50vh;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+      }
+
+      &::after {
+        transform: translateX(80%) translateY(-100%);
+      }
+    }
+
+    h2 {
+      font-size: $xxl;
+      margin-bottom: 5rem;
+    }
+
+    .details_container {
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact_card {
+      position: relative;
+      z-index: 2;
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+    }
+  }
+
+  .contact_form {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h3 {
+      font-size: $xxl;
+      margin-bottom: 4rem;
+    }
+
+    .form_container {
+      max-width: 520px;
+      flex: 1;
+      width: 100%;
+
+      .row {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        justify-content: space-between;
+      }
+    }
+
+    .submit_btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      font-size: $md;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      transition: ease-in-out 0.3s;
+      margin-top: 3rem;
+      margin-bottom: 4rem;
+      text-transform: uppercase;
+
+      &:hover {
+        gap: 1rem;
+      }
+    }
+
+    .email_btn {
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+
+  @media (max-width: 1152px) {
+    flex-direction: column-reverse;
+    gap: 4rem;
+
+    > div {
+      flex: 1;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 786px) {
+    .contact_form .form_container .row {
+      flex-direction: column;
+      flex: 1;
+      width: 100%;
+    }
+  }
+}

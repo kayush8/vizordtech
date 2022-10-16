@@ -1,0 +1,86 @@
+header.navbar {
+  position: relative;
+  margin-bottom: 10rem;
+  padding-bottom: 3rem;
+  padding-top: 1rem;
+  width: 100%;
+  z-index: 2;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .logo {
+    margin-left: 4.95vw;
+  }
+
+  .navbar_nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding-right: 4.925vw;
+
+    a {
+      cursor: pointer;
+      position: relative;
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      font-weight: 400;
+
+      &:not(.get_in_touch)::before {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        right: 0;
+        width: 0%;
+        height: 1px;
+        background-color: #000;
+        transition: ease-in-out 0.3s;
+      }
+
+      &:not(.get_in_touch):hover::before {
+        left: 0;
+        right: auto;
+        width: 100%;
+      }
+    }
+
+    .get_in_touch {
+      margin-left: 2.5rem;
+
+      &::before {
+        content: "";
+        border: 1px solid #000;
+        left: 50%;
+        height: 2.5rem;
+        position: absolute;
+        width: 120%;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        top: 55%;
+      }
+    }
+
+    @media (max-width: 856px) {
+      display: none;
+    }
+  }
+
+  .back_circle {
+    position: absolute;
+    height: 30vh;
+    width: 30vh;
+    top: -40%;
+    left: 14%;
+    background: radial-gradient(#110110, #ffffff00);
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(100px);
+  }
+}

@@ -1,0 +1,239 @@
+@import "../base/variables";
+
+.quote {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  background-color: #fff;
+
+  .header {
+    max-width: 678px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 3rem;
+
+    h2 {
+      font-size: $xl;
+    }
+
+    p {
+      max-width: 568px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .content_wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .quote_container {
+      flex: 2.5;
+    }
+  }
+
+  .card_container {
+    display: grid;
+    grid-template-columns: 260px 260px 260px;
+    padding: 3rem 0;
+    align-items: center;
+    justify-content: center;
+    gap: 1.75rem;
+
+    .card {
+      border: 1px solid #dedede;
+      padding: 0.5rem;
+      padding: 2.5rem 1.5rem;
+      user-select: none;
+      border-radius: 12px;
+      max-width: 260px;
+      cursor: pointer;
+      display: flex;
+      transition: ease 0.3s;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      position: relative;
+      min-height: 180px;
+
+      .icon {
+        height: 50px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        font-size: $lg;
+      }
+
+      h5 {
+        font-size: $md;
+        font-family: $font;
+        display: inline-block;
+        margin-bottom: 0.25rem;
+      }
+
+      p {
+        font-size: 1em;
+        margin: 0;
+      }
+
+      .mark {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        background-color: transparent;
+        border: 1px solid #ccc;
+        color: #fff;
+        font-size: $sm;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: ease-in-out 0.2s;
+      }
+
+      &:hover {
+        border-color: #aaa;
+        box-shadow: 0px 0px 0px 3px #0b71df80;
+      }
+
+      &.active {
+        box-shadow: 0px 0px 0px 3px #0b70df;
+
+        .mark {
+          background-color: #444be6;
+          border-color: transparent;
+        }
+      }
+    }
+  }
+
+  .quote_container_bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+
+    .next_btn,
+    .prev_btn {
+      cursor: pointer;
+      padding: 1rem 2.5rem;
+      font-size: 1.15em;
+      font-family: $font;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      min-width: 260px;
+      border-radius: 8px;
+      border: none;
+      border: 2px solid #0b70df;
+      background-color: #0b70df;
+      color: #fff;
+    }
+
+    .prev_btn {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1.15em;
+      border: none;
+      color: #0b70df;
+      background-color: #fff;
+      border: 2px solid #0b70df;
+    }
+  }
+
+  .quote_container_top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .progress_bar {
+      max-width: 180px;
+      width: 100%;
+      height: 16px;
+      border-radius: 50px;
+      background-color: #d6e1ee;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      .progress {
+        font-size: $xsm;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #0b70df;
+        height: 100%;
+        border-radius: 50px;
+        color: #fff;
+      }
+    }
+  }
+
+  .bill {
+    flex: 1;
+    border-radius: 20px;
+    max-width: 920px;
+    margin: 3rem auto;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    height: max-content;
+
+    .bill_body {
+      padding: 3rem 0;
+
+      .none {
+        padding: 1rem;
+        text-align: center;
+      }
+    }
+
+    .bill_header {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #aaa;
+
+      .left,
+      .right {
+        padding: 0.5rem 1.5rem;
+        font-size: $md;
+      }
+
+      .left {
+        flex: 2;
+      }
+
+      .right {
+        flex: 1;
+        border-left: 1px solid #aaa;
+      }
+    }
+
+    .bill_footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+      margin-top: 2rem;
+      border-top: 1px solid #aaa;
+
+      span {
+        font-size: $md;
+
+        &.bold {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

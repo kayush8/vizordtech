@@ -1,0 +1,119 @@
+@import "../base/variables";
+
+.services {
+  padding: 4rem 1rem;
+
+  .header {
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10rem;
+  }
+
+  .services_wrapper {
+    position: relative;
+    transition: color ease-in-out 0.4s;
+
+    &.active {
+      color: #aeaeae;
+    }
+  }
+
+  .service_pic {
+    position: absolute;
+    width: 420px;
+    top: -210px;
+    left: -210px;
+    z-index: -1;
+    aspect-ratio: 12 / 16;
+    background-color: #ccc;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .service_card {
+    border-bottom: 1px solid #ccc;
+    padding: 2rem 0;
+    transition: color ease-in-out 0.4s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .card_header {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .card_desc {
+      text-align: center;
+      max-width: 920px;
+      margin-left: auto;
+      overflow: hidden;
+      margin-right: auto;
+    }
+
+    .num {
+      margin-top: auto;
+      padding: 2rem 0;
+      font-size: $lg;
+    }
+
+    h2.service_name {
+      text-align: center;
+      font-weight: 500;
+      font-size: 8vw;
+      margin: 0;
+      line-height: 1;
+    }
+
+    .arrow_container {
+      height: 70px;
+      width: 70px;
+      font-size: 70px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      justify-content: flex-end;
+
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform ease-in-out 0.4s;
+
+        &:first-child {
+          transform: translateY(-100%);
+        }
+      }
+    }
+
+    &:hover {
+      color: #000;
+
+      .arrow_container {
+        span:first-child {
+          transform: translateX(100%);
+        }
+
+        span:last-child {
+          transform: translateY(100%) translateX(100%);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .service_pic {
+      display: none;
+    }
+
+    .service_card .arrow_container {
+      height: 40px;
+      width: 40px;
+      font-size: 40px;
+    }
+  }
+}
