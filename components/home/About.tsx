@@ -40,6 +40,7 @@ const About: React.FC = () => {
               <a
                 href="http://koahyn.rf.gd/2022/10/13/digital-marketing/"
                 target="_blank"
+                style={{ color: "blue" }}
                 rel="noreferrer"
               >
                 <a>Koahyn</a>
