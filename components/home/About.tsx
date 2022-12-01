@@ -38,7 +38,7 @@ const About: React.FC = () => {
               If you want to learn about digital marketing you can also
               checkout:{" "}
               <a
-                href="http://koahyn.rf.gd/2022/10/13/digital-marketing/"
+                href="http://koahyn.rf.gd/"
                 target="_blank"
                 style={{ color: "blue" }}
                 rel="noreferrer"
